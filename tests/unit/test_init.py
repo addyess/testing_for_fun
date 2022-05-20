@@ -11,7 +11,8 @@ def test_main_starts_async():
         with mock.patch("testing_for_fun.amain", mock.MagicMock()) as mock_amain:
             testing_for_fun.main()
 
-    # confirm the asyncio.run method is called once with the return_value from calling amain()
+    # confirm the asyncio.run method is called once
+    # with the return_value from calling amain()
     mock_asyncio.run.assert_called_once_with(mock_amain.return_value)
 
 

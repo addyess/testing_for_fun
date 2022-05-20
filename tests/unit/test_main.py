@@ -15,5 +15,7 @@ def test_module_main_starts_async():
             del mod
             del sys.modules[main_module]
             assert main_module not in sys.modules.keys()
-    # confirm the asyncio.run method is called once with the return_value from calling amain()
+
+    # confirm the asyncio.run method is called once
+    # with the return_value from calling amain()
     mock_asyncio.run.assert_called_once_with(mock_amain.return_value)
