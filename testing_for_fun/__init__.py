@@ -4,11 +4,11 @@ import asyncio
 import logging
 from lxml import html
 from typing import Iterable
-FORMAT = '%(asctime)s %(message)s'
+
+FORMAT = "%(asctime)s %(message)s"
 logging.basicConfig(format=FORMAT)
 log = logging.getLogger(__name__)
 log.setLevel(logging.INFO)
-
 
 
 class EmojiPicker:
